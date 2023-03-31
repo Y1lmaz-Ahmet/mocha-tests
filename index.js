@@ -33,6 +33,32 @@ function yearQuarters(month) {
     return (month = 4);
   }
 }
+function reverseString(str) {
+  //turns string into array with each char in a unique index
+  //reverse order of the chars in the array
+  //turning the array into a string and returning it
+  //no return => undefined value
+  str = str.split("");
+  return str.reverse().join("");
+}
+function checkForFactor(base, factor) {
+  return base % factor === 0 ? true : false;
+}
+function sayHello(name) {
+  return `Hello, ${name}`;
+}
+function rockPaperScissor(p1, p2) {
+  //draw
+  if (p1 === p2) return "Draw!";
+  //player 1 wins
+  if (p1 === "rock" && p2 === "scissors") return "Player 1 won!";
+  if (p1 === "scissors" && p2 === "paper") return "Player 1 won!";
+  if (p1 === "paper" && p2 === "rock") return "Player 1 won!";
+  //player 2 wins
+  if (p2 === "rock" && p1 === "scissors") return "Player 2 won!";
+  if (p2 === "scissors" && p1 === "paper") return "Player 2 won!";
+  if (p2 === "paper" && p1 === "rock") return "Player 2 won!";
+}
 
 module.exports = {
   myFunction,
@@ -40,4 +66,8 @@ module.exports = {
   sentence,
   Capitalisation,
   yearQuarters,
+  reverseString,
+  checkForFactor,
+  sayHello,
+  rockPaperScissor,
 };

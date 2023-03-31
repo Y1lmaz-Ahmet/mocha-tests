@@ -7,6 +7,10 @@ const {
   sentence,
   Capitalisation,
   yearQuarters,
+  reverseString,
+  checkForFactor,
+  sayHello,
+  rockPaperScissor,
 } = require("../index");
 describe("myFunction", () => {
   it("should return the sum of two numbers", () => {
@@ -59,5 +63,50 @@ describe("yearQuarters", () => {
     assert.strictEqual(yearQuarters(4), 2);
     assert.strictEqual(yearQuarters(7), 3);
     assert.strictEqual(yearQuarters(12), 4);
+  });
+});
+describe("reverseString", () => {
+  it("return the string in reverse order", () => {
+    assert.strictEqual(reverseString("world"), "dlrow");
+    assert.strictEqual(reverseString("ahmet"), "temha", "should be temha");
+    assert.notStrictEqual(reverseString("ahmet"), "ahmet");
+    assert.strictEqual(reverseString(""), "", "empty string");
+  });
+});
+describe("checkForFactor", () => {
+  it("Return true if it is a factor", () => {
+    assert.strictEqual(checkForFactor(10, 2), true, "should be true");
+    assert.strictEqual(checkForFactor(2450, 5), true, "should be true");
+    assert.strictEqual(checkForFactor(24612, 3), true, "should be true");
+    assert.equal(checkForFactor(63, 7), true, "expected:true");
+    expect(checkForFactor(40, 2)).to.be.true;
+  });
+  it("returns false if it is NOT a factor", () => {
+    assert.strictEqual(checkForFactor(6, 4), false, "expected:false");
+    assert.strictEqual(checkForFactor(653, 7), false, "expected:false");
+    expect(checkForFactor(24617, 3), "factor").to.be.false;
+  });
+});
+describe("sayHello", () => {
+  it("return a string text to greet the user", () => {
+    assert.strictEqual(sayHello("ahmet"), "Hello, ahmet");
+    expect(sayHello("ahmet")).to.equal("Hello, ahmet");
+    assert.strictEqual(sayHello("Liutenant Uhura"), "Hello, Liutenant Uhura");
+    assert.notDeepStrictEqual(sayHello("Dr. McCoy"), "Hello, Dr. McCoyyy");
+  });
+});
+describe("rockPaperScissor", () => {
+  it("player 1 has won", () => {
+    assert.strictEqual(rockPaperScissor("rock", "scissors"), "Player 1 won!");
+    assert.strictEqual(rockPaperScissor("scissors", "paper"), "Player 1 won!");
+    assert.strictEqual(rockPaperScissor("paper", "rock"), "Player 1 won!");
+  });
+  it("player 2 has won", () => {
+    assert.strictEqual(rockPaperScissor("scissors", "rock"), "Player 2 won!");
+    assert.strictEqual(rockPaperScissor("paper", "scissors"), "Player 2 won!");
+    assert.strictEqual(rockPaperScissor("rock", "paper"), "Player 2 won!");
+  });
+  it("its a draw", () => {
+    assert.strictEqual(rockPaperScissor("rock", "rock"));
   });
 });
