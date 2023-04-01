@@ -62,6 +62,12 @@ function rockPaperScissor(p1, p2) {
 function keyValueGen(array) {
   return array.map((n, i) => `${i + 1}: ${n}`);
 }
+function findMinValue(array) {
+  return Math.min(...array);
+}
+function findMaxValue(array) {
+  return Math.max(...array);
+}
 
 module.exports = {
   myFunction,
@@ -74,4 +80,6 @@ module.exports = {
   sayHello,
   rockPaperScissor,
   keyValueGen,
+  findMinValue,
+  findMaxValue,
 };

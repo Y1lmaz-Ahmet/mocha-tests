@@ -12,6 +12,8 @@ const {
   sayHello,
   rockPaperScissor,
   keyValueGen,
+  findMinValue,
+  findMaxValue,
 } = require("../index");
 describe("myFunction", () => {
   it("should return the sum of two numbers", () => {
@@ -116,5 +118,26 @@ describe("keyValueGen", () => {
   it("implementing the line numbering", () => {
     assert.deepEqual(keyValueGen([]), [], "should return an empty array");
     assert.deepEqual(keyValueGen(["a", "b", "c"]), ["1: a", "2: b", "3: c"]);
+  });
+});
+describe("findMinValue", () => {
+  it("return the MIN value from the array", () => {
+    assert.strictEqual(
+      findMinValue([-52, 56, 30, 29, -54, 0, -110]),
+      -110,
+      "expected:-110"
+    );
+    assert.strictEqual(findMinValue([42, 54, 65, 87, 0]), 0);
+  });
+});
+describe("findMaxValue", () => {
+  it("return the MAX value from the array", () => {
+    assert.strictEqual(
+      findMaxValue([-52, 56, 30, 29, -54, 0, -110]),
+      56,
+      "expected:-110"
+    );
+    assert.strictEqual(findMaxValue([4, 6, 2, 1, 9, 63, -134, 566]), 566);
+    assert.strictEqual(findMaxValue([5]), 5);
   });
 });
