@@ -172,8 +172,8 @@ describe("max of 1 and 2 should be 2", () => {
   it("max of 1 and 2 should be 2", () => {
     expect(max(1, 2)).to.equal(2);
   });
-  it("max of 8 and 2 should be 10", () => {
-    expect(max(8, 2)).to.equal(10);
+  it("max of 8 and 2 should be 8", () => {
+    expect(max(8, 2)).to.equal(8);
   });
 });
 describe('stringLength of "hello" should be 5', () => {
