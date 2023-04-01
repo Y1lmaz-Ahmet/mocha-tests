@@ -71,6 +71,27 @@ function findMaxValue(array) {
 function stringToInt(str) {
   return Number(str);
 }
+function countBy(x, n) {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i * x);
+  }
+  return arr;
+}
+// Functie om de som van twee getallen te berekenen
+function add(a, b) {
+  return a + b;
+}
+
+// Functie om de grootste van twee getallen te bepalen
+function max(a, b) {
+  return a > b ? a : b;
+}
+
+// Functie om de lengte van een string te berekenen
+function stringLength(str) {
+  return str.length;
+}
 
 module.exports = {
   myFunction,
@@ -86,4 +107,8 @@ module.exports = {
   findMinValue,
   findMaxValue,
   stringToInt,
+  countBy,
+  add,
+  max,
+  stringLength,
 };

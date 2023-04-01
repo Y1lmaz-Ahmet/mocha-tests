@@ -15,6 +15,10 @@ const {
   findMinValue,
   findMaxValue,
   stringToInt,
+  countBy,
+  add,
+  max,
+  stringLength,
 } = require("../index");
 describe("myFunction", () => {
   it("should return the sum of two numbers", () => {
@@ -146,5 +150,31 @@ describe("stringToInt", () => {
   it("converts STRING value to INTEGER", () => {
     assert.strictEqual(stringToInt("123"), 123, "expect: number 123");
     expect(stringToInt("123")).to.equal(123);
+  });
+});
+describe("countBy", () => {
+  it("function with two arguments that will return an array of the first n multiples of x", () => {
+    assert.deepEqual(
+      countBy(1, 10),
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "array doesnt match"
+    );
+    assert.deepEqual(countBy(2, 5), [2, 4, 6, 8, 10], "Array does not match");
+  });
+});
+describe("adds 1 + 2 to equal 3", () => {
+  it("adds 1 + 2 to equal 3 ", () => {
+    assert.deepEqual(add(1, 2), 3);
+    expect(add(1, 2)).to.equal(3);
+  });
+});
+describe("max of 1 and 2 should be 2", () => {
+  it("max of 1 and 2 should be 2", () => {
+    expect(max(1, 2)).to.equal(2);
+  });
+});
+describe('stringLength of "hello" should be 5', () => {
+  it('stringLength of "hello" should be 5', () => {
+    expect(stringLength("hello")).to.equal(5);
   });
 });

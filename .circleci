@@ -1,0 +1,10 @@
+
+
+language: node_js
+node_js:
+  - '14'
+
+# Installeer Jest en voer de tests uit
+script:
+  - npm install
+  - npm test
