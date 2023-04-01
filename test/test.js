@@ -180,5 +180,6 @@ describe('stringLength of "hello" should be 5', () => {
   it('stringLength of "hello" should be 5', () => {
     expect(stringLength("hello")).to.equal(5);
     expect(stringLength("hellooo")).to.equal(7);
+    expect(stringLength("ahmet")).to.equal(5);
   });
 });
