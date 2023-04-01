@@ -59,6 +59,9 @@ function rockPaperScissor(p1, p2) {
   if (p2 === "scissors" && p1 === "paper") return "Player 2 won!";
   if (p2 === "paper" && p1 === "rock") return "Player 2 won!";
 }
+function keyValueGen(array) {
+  return array.map((n, i) => `${i + 1}: ${n}`);
+}
 
 module.exports = {
   myFunction,
@@ -70,4 +73,5 @@ module.exports = {
   checkForFactor,
   sayHello,
   rockPaperScissor,
+  keyValueGen,
 };

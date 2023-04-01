@@ -11,6 +11,7 @@ const {
   checkForFactor,
   sayHello,
   rockPaperScissor,
+  keyValueGen,
 } = require("../index");
 describe("myFunction", () => {
   it("should return the sum of two numbers", () => {
@@ -107,6 +108,13 @@ describe("rockPaperScissor", () => {
     assert.strictEqual(rockPaperScissor("rock", "paper"), "Player 2 won!");
   });
   it("its a draw", () => {
-    assert.strictEqual(rockPaperScissor("rock", "rock"));
+    assert.strictEqual(rockPaperScissor("rock", "rock"), "Draw!");
+  });
+});
+
+describe("keyValueGen", () => {
+  it("implementing the line numbering", () => {
+    assert.deepEqual(keyValueGen([]), [], "should return an empty array");
+    assert.deepEqual(keyValueGen(["a", "b", "c"]), ["1: a", "2: b", "3: c"]);
   });
 });
