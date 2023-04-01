@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/mocha-tests
+    docker:
+      - image: circleci/node:14.17
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
