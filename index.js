@@ -68,6 +68,9 @@ function findMinValue(array) {
 function findMaxValue(array) {
   return Math.max(...array);
 }
+function stringToInt(str) {
+  return Number(str);
+}
 
 module.exports = {
   myFunction,
@@ -82,4 +85,5 @@ module.exports = {
   keyValueGen,
   findMinValue,
   findMaxValue,
+  stringToInt,
 };

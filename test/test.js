@@ -14,6 +14,7 @@ const {
   keyValueGen,
   findMinValue,
   findMaxValue,
+  stringToInt,
 } = require("../index");
 describe("myFunction", () => {
   it("should return the sum of two numbers", () => {
@@ -139,5 +140,11 @@ describe("findMaxValue", () => {
     );
     assert.strictEqual(findMaxValue([4, 6, 2, 1, 9, 63, -134, 566]), 566);
     assert.strictEqual(findMaxValue([5]), 5);
+  });
+});
+describe("stringToInt", () => {
+  it("converts STRING value to INTEGER", () => {
+    assert.strictEqual(stringToInt("123"), 123, "expect: number 123");
+    expect(stringToInt("123")).to.equal(123);
   });
 });
