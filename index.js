@@ -92,6 +92,14 @@ function max(a, b) {
 function stringLength(str) {
   return str.length;
 }
+const reverseSeq = (n) => {
+  let arr = [];
+  //reverse array loop
+  for (let i = n; i > 0; i--) {
+    arr.push(i);
+  }
+  return arr;
+};
 
 module.exports = {
   myFunction,
@@ -111,4 +119,5 @@ module.exports = {
   add,
   max,
   stringLength,
+  reverseSeq,
 };

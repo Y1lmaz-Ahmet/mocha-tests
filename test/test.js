@@ -19,6 +19,7 @@ const {
   add,
   max,
   stringLength,
+  reverseSeq,
 } = require("../index");
 describe("myFunction", () => {
   it("should return the sum of two numbers", () => {
@@ -181,5 +182,14 @@ describe('stringLength of "hello" should be 5', () => {
     expect(stringLength("hello")).to.equal(5);
     expect(stringLength("hellooo")).to.equal(7);
     expect(stringLength("ahmet")).to.equal(5);
+  });
+});
+describe("reverseSeq", () => {
+  it("function that returns an array of integers from n to 1", () => {
+    assert.deepEqual(
+      reverseSeq(5),
+      [5, 4, 3, 2, 1],
+      "expected:reverse integer arr"
+    );
   });
 });
